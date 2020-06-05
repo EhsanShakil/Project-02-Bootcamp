@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Project 02 Bootcamp
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -28,7 +28,7 @@ jobs:
 
       # Installing Yarn
       - name: GitHub Action for Yarn
-        uses: Borales/actions-yarn@v2.3.0
+        uses: Borales/actions-yarn@v2.1.0
         with:
           # Yarn command
           cmd: install
