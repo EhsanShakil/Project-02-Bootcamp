@@ -17,26 +17,26 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
 
-    # Installing Node
-    - name: Setup Node Environment
-      uses: actions/setup-node@v1.4.2
-      with:
-        version: 12
+      # Installing Node
+      - name: Setup Node Environment
+        uses: actions/setup-node@v1.4.2
+        with:
+          version: 12
 
-    # Installing Yarn
-    - name: GitHub Action for Yarn
-      uses: Borales/actions-yarn@v2.3.0
-      with:
-        # Yarn command
-        cmd: install
+      # Installing Yarn
+      - name: GitHub Action for Yarn
+        uses: Borales/actions-yarn@v2.3.0
+        with:
+          # Yarn command
+          cmd: install
 
-    # Installing Surge
-    - name: Installing Surge
-      uses: npm install --global surge
-      
-    # Deploying
-    - name: Deploying On Surge
-      run: Surge ./build http://project-02-bootcamp.surge.sh/ --token ${{ secrets.BOOTCAMP_PROJECT_02}}
+      # Installing Surge
+      - name: Installing Surge
+        uses: npm install --global surge
+
+      # Deploying
+      - name: Deploying On Surge
+        run: surge ./build http://project-02-bootcamp.surge.sh/ --token ${{secrets.BOOTCAMP_PROJECT_02}}
