@@ -35,7 +35,7 @@ jobs:
 
       # Installing Surge
       - name: Installing Surge
-        uses: npm install --global surge
+        run: npm install --global surge
 
       # Deploying
       - name: Deploying On Surge
