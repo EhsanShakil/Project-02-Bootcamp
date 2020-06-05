@@ -28,7 +28,7 @@ jobs:
 
       # Installing Yarn
       - name: GitHub Action for Yarn
-        uses: Borales/actions-yarn@v2.1.0
+        uses: actions/setup-yarn@v2-beta
         with:
           # Yarn command
           cmd: install
